@@ -7,7 +7,6 @@ const LogOut = () => {
   const handleLogOut = () => {
     logout();
   };
-  console.log(Loading);
   return (
     <div className="mt-auto">
       {Loading ? (

@@ -1,18 +1,38 @@
+import { useEffect } from "react";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import useConversation from "../zustand/conversation";
 import MessageInput from "./MessageInput";
 import Messages from "./Messages";
 import { TiMessages } from "react-icons/ti";
-const MessageScreen = () => {
+const MessageScreen = ({ Switch, setSwitch }) => {
+  const { selectedconversation, setconversition } = useConversation();
+  useEffect(() => {
+    //cleanup or unmouting comnponent
+    return () => setconversition(null);
+  }, [setconversition]);
   const noChats = true;
   return (
-    <div className="md:min-w-[450px] flex flex-col">
-      {noChats ? (
+    <div
+      className={` max-sm:min-h-[97vh] max-sm:min-w-[97vw] max-sm:max-w-[97vw] max-sm:max-h-[97vh] md:min-w-[450px] flex flex-col ${
+        Switch ? "" : "max-sm:hidden"
+      }`}
+    >
+      {!selectedconversation ? (
         <NoChatSelected />
       ) : (
         <>
           {/*Header*/}
-          <div className="bg-slate-500 px-4 py-2 mb-2">
-            <span className="label-text">To:</span>
-            <span className=" text-gray-900 font-bold"> Shahnoor Mujawar </span>
+          <div className=" flex align-baseline  justify-start bg-slate-500 px-4 py-2 mb-2">
+            <button onClick={() => setSwitch(!Switch)} className=" md:hidden">
+              {" "}
+              <IoMdArrowRoundBack className=" text-white mr-10 text-xl" />
+            </button>
+
+            <span className="label-text mr-2"> To: </span>
+            <span className=" text-gray-900 font-bold">
+              {" "}
+              {selectedconversation.fullname}{" "}
+            </span>
           </div>
           <Messages />
           <MessageInput />
