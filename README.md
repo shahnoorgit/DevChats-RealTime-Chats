@@ -6,21 +6,21 @@ DevChats empowers seamless real-time communication for everyone. Users can effor
 
 Key Features:
 
-Real-Time Messaging: Send and receive messages instantly, fostering a more interactive and engaging experience.
+#Real-Time Messaging: Send and receive messages instantly, fostering a more interactive and engaging experience.
 
-Secure Login: User authentication guarantees data privacy and fosters trust within the development community.
+#Secure Login: User authentication guarantees data privacy and fosters trust within the development community.
 
-MERN Stack: Benefit from the combined power of: MongoDB: Scalable and flexible NoSQL database for data persistence (learned about document-oriented databases).
+#MERN Stack: Benefit from the combined power of: MongoDB: Scalable and flexible NoSQL database for data persistence (learned about document-oriented databases).
 
-Express.js: Efficient framework for building the server-side API (gained experience with routing and middleware).
+#Express.js: Efficient framework for building the server-side API (gained experience with routing and middleware).
 
-React.js: Dynamic library for creating a user-friendly and responsive interface (explored component-based architecture and state management).
+#React.js: Dynamic library for creating a user-friendly and responsive interface (explored component-based architecture and state management).
 
-Node.js: JavaScript runtime environment for a highly performant backend (learned about asynchronous programming and event-driven architecture).
+#Node.js: JavaScript runtime environment for a highly performant backend (learned about asynchronous programming and event-driven architecture).
 
-Socket.IO Integration: Enjoy real-time communication without page refreshes, maintaining uninterrupted conversation flow (explored WebSockets and real-time communication protocols).
+#Socket.IO Integration: Enjoy real-time communication without page refreshes, maintaining uninterrupted conversation flow (explored WebSockets and real-time communication protocols).
 
-We welcome contributions to DevChats! Feel free to fork the repository, make changes, and submit pull requests.
+#We welcome contributions to DevChats! Feel free to fork the repository, make changes, and submit pull requests.
 
 
 Problem Addressed: The need for a real-time messaging platform.
