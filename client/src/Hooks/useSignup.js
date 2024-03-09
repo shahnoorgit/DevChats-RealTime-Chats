@@ -36,6 +36,10 @@ const useSignup = () => {
       });
 
       const data = await res.json();
+      if (data.userInvalid) {
+        toast.error(data.userInvalid);
+        throw new Error(data.userInvalid);
+      }
       if (data.error) {
         throw new Error(data.error);
       }

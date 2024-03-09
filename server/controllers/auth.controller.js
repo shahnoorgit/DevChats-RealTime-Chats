@@ -32,7 +32,7 @@ export const signupuser = async (req, res) => {
     }
     const user = await User.findOne({ username });
     if (user) {
-      return res.status(200).json("user exits");
+      return res.status(200).json({ userInvalid: "username already exits" });
     }
     const salt = await bcrypt.genSalt(5);
     const hashedPassword = await bcrypt.hash(password, salt);

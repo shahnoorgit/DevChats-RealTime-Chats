@@ -1,3 +1,4 @@
+import { useSocketContext } from "../context/socketContext";
 import useConversation from "../zustand/conversation";
 
 const Conversation = ({
@@ -16,6 +17,9 @@ const Conversation = ({
     setSwitch(!Switch);
     console.log("hy");
   };
+  const { userOnline } = useSocketContext();
+
+  const isOnline = userOnline.includes(convertation._id);
   return (
     <>
       <div
@@ -24,7 +28,7 @@ const Conversation = ({
           isSelected ? "bg-sky-500" : ""
         }`}
       >
-        <div className=" avatar online">
+        <div className={`avatar ${isOnline ? "online" : ""}`}>
           <div className="w-12 rounded-full">
             <img src={profilePic} alt="User pic" />
           </div>

@@ -7,7 +7,6 @@ const Search = () => {
   const [search, setSearch] = useState("");
   const { setconversition } = useConversation();
   const { conversation } = useGetConversation();
-  console.log(conversation);
   const handleSearch = (e) => {
     e.preventDefault();
     if (!search) return;

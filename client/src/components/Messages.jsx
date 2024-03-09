@@ -2,9 +2,11 @@ import Message from "./Message";
 import useGetMessages from "../Hooks/useGetMessages.js";
 import SkullMSG from "../components/skeliton/SkullMSG.jsx";
 import { useEffect, useRef } from "react";
+import useListenMessages from "../Hooks/useListenMessages";
 
 const Messages = () => {
   const { Loading, messages } = useGetMessages();
+  useListenMessages();
   const lastMessage = useRef();
   useEffect(() => {
     setTimeout(() => {

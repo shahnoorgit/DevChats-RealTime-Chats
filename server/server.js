@@ -5,14 +5,14 @@ import connectdb from "./Database/mongoDBconnect.js";
 import messagesroutes from "./routes/messages.route.js";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/user.route.js";
+import { app, server } from "./socket/socket.js";
 
-const app = express();
 const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
-app.listen(PORT, (req, res) => {
+server.listen(PORT, (req, res) => {
   connectdb();
   console.log(`app running on port ${PORT}`);
 });
