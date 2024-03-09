@@ -5,7 +5,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server/server.js"
+    "server": "nodemon server/server.js",
+    "start": "node server/server.js",
+    "build": "npm install &&  npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.0",
     "nodemon": "^3.1.0",
+    "path": "^0.12.7",
     "socket.io": "^4.7.4"
   }
 }

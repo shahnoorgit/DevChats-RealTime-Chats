@@ -6,8 +6,10 @@ import messagesroutes from "./routes/messages.route.js";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/user.route.js";
 import { app, server } from "./socket/socket.js";
+import path from "path";
 
 const PORT = process.env.PORT || 5000;
+const __dirname = path.resolve();
 
 dotenv.config();
 app.use(express.json());
@@ -19,6 +21,11 @@ server.listen(PORT, (req, res) => {
 app.use("/api/auth", authroutes);
 app.use("/api/messages", messagesroutes);
 app.use("/api/users", userRoutes);
+app.use(express.static(path.join(__dirname, "/client/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 app.get("/", (req, res) => {
   res.send("welcom to home of API");
