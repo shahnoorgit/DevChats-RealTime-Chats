@@ -1,6 +1,7 @@
 DevChats: A Real-Time Messaging Webapp Built with MERN & Socket.IO
 Live-:https://devchats.onrender.com
-Description:
+
+![Project Screenshot](project.png)
 
 DevChats empowers seamless real-time communication for everyone. Users can effortlessly connect, message, and collaborate in a dynamic online environment. Leverage the power of the MERN stack (MongoDB, Express.js, React.js, Node.js) for a robust backend and a captivating user interface. Socket.IO facilitates instant message delivery, ensuring a lag-free conversational experience.
 
